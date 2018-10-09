@@ -23,21 +23,21 @@
     preObject.innerText = JSON.stringify(snap.val(), null, 4);
   });*/
 
-  const dbEvaluationStudentsRef = firebase.database().ref().child('cpf');
-  dbEvaluationStudentsRef.on('value', snap => {
-    console.log(dbEvaluationStudentsRef);
+  const dbPessoasRef = firebase.database().ref().child('cpf');
+  dbPessoasRef.on('value', snap => {
+    console.log(dbPessoasRef);
     while(table.hasChildNodes()) {
 	     table.removeChild(table.firstChild);
     }
 
-    var students = snap.val();
+    var pessoas = snap.val();
 
-    for(var i in students) {
+    for(var i in pessoas) {
       var row = table.insertRow(-1);
 
-      for(var j in students[i]) {
+      for(var j in pessoas[i]) {
 	       cell = row.insertCell(-1);
-	       cell.innerHTML = students[i][j];
+	       cell.innerHTML = pessoas[i][j];
       }
     }
   });
