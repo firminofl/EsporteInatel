@@ -6,3 +6,19 @@ body {
 a {
   color: #00B7FF;
 }
+
+/**Cor quando passar por cima**/
+#minhaTabela tr:hover td{
+  background-color: #feffb7;
+}
+
+/**Cor quando selecionado**/
+#minhaTabela tr.selecionado td{
+  background-color: #aff7ff;
+}
+
+button{
+  background-color: white;
+  border: 1px solid black;
+  float: right;
+}

@@ -19,7 +19,7 @@
 		storageBucket: "esporteinatel.appspot.com",
 		messagingSenderId: "579754760416"
 	  };
-	  
+
 	  firebase.initializeApp(config);
 
 	  var nome = document.getElementById('titulo');
@@ -32,58 +32,30 @@
     <fieldset id="formCadastro">
 	    <legend>Cadastro de pessoa</legend>
 	    <form action="/cadastrar-pessoa" method="POST" onsubmit="return validacao()">
-			
+
 			<!--Associar label com os elementos - Boa pratica-->
 			<label for="nome">Nome</label>
 			<input id="nome" placeholder="Nome" name="nome" required autofocus>
 			<br></b><br></b>
-			
+
+      <label for="cpf">CPF</label>
+      <input id="cpf" placeholder="CPF" name="cpf" maxlength="14">
+      <br></b><br></b>
 
 			<label for="email">Email</label>
 			<input type="email" id="email" placeholder="Email" name="email">
 			<br></b><br></b>
 
-			<label for="cpf">CPF</label>
-			<input type="number" id="cpf" name="cpf" maxlength="14">
-			<br></b><br></b>
-
-			<label for="url">URL</label>
-			<input type="url" id="url" placeholder="ex: https://www.google.com" name="url" >
-			<br></b><br></b>
-
-			<label for="pesquisa">Pesquisar</label>
-			<input type="search" id="pesquisa" name="pesquisa">
-			<br></b><br></b>
-
-			<label for="range">Valores</label>
-			<input type="range" id="range" min="0" max="10" value="5" name="range">
+			<label for="range">Matrícula</label>
+			<input type="text" id="matricula" placeholder="Matrícula" name="matricula">
 			<br></b><br></b>
 
 			<label for="data">Data</label>
 			<input type="date" id="data" name="data">
 			<br></b><br></b>
 
-			<label for="cor">Cor</label>
-			<input type="color" id="cor" name="cor">
-			<br></b><br></b>
-			
 			<input type="submit" value="Enviar">
 		</form>
-	</fieldset>
-
-	<fieldset>
-		<legend>Pessoas cadastradas</legend>
-		<table>
-			<tr>
-				<td>Nome</td>
-				<td>Email</td>
-				<td>Numero</td>
-				<td>URL</td>
-				<td>Valores</td>
-				<td>Data</td>
-				<td>Cor</td>
-			</tr>
-		</table>
 	</fieldset>
   </body>
 </html>

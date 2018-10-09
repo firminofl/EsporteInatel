@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lista de pessoas</title>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <!--Value-->
+    <fieldset>
+		    <legend>Pessoas cadastradas</legend>
+        <table class="table table-striped" border="1" id="minhaTabela">
+      		<thead>
+      			<tr>
+              <th>CPF</th>
+              <th>Data</th>
+              <th>Email</th>
+              <th>Matricula</th>
+              <th>Nome</th>
+      			</tr>
+      		</thead>
+      		<tbody>
+    		  </body>
+        </table>
+        <div class="button">
+          <button id="excluir">Excluir</button>
+          <button id="editar" onclick="eventoTabela()">Editar</button>
+        </div>
+
+
+    </fieldset>
+
+    <script src="/javascripts/tabela.js"></script>
+    <script src="/javascripts/popularTabela.js"></script>
+  </body>
+</html>
