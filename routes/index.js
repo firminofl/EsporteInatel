@@ -16,7 +16,12 @@ messagingSenderId: "579754760416"
 
 /* GET home page. */
 router.get('/', function(request, response, next) {
-  response.render('index', { title: 'Inicial' , pessoa: pessoa });
+  response.render('index', { title: 'Inicial'});
+});
+
+router.get('/listar-pessoas', function(request, response, next) {
+  response.render('lista', { title: 'Pessoas cadastradas'});
+  next();
 });
 
 /* POST home page. */
@@ -51,9 +56,7 @@ router.post('/cadastrar-pessoa', function(request, response, next) {
 	console.log(pessoa);
 	console.log("--------------");
 
-  response.render('lista', { title: 'Pessoas cadastradas'});
-
-  next();
+  response.render('index', { title: 'Inicial'});
 });
 
 function writeUserData(nome, cpf, email, matricula, data) {
