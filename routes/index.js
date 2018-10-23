@@ -21,12 +21,12 @@ router.get('/', function(request, response, next) {
 });
 
 router.get('/listar-pessoas', function(request, response, next) {
-  response.render('lista', { title: 'Faculdades cadastradas'});
+  response.render('lista', { title: 'Pessoas cadastradas'});
   next();
 });
 
 router.get('/abrir-form', function(request, response, next) {
-  response.render('menu', { title: 'Cadastrar faculdade'});
+  response.render('menu', { title: 'Cadastrar pessoa'});
   next();
 });
 
@@ -70,15 +70,26 @@ router.post('/cadastrar-pessoa/', function(request, response, next) {
 });
 
 function writeUserData(nome, cpf, email, matricula, data) {
-		firebase.initializeApp(config);
-    firebase.database().ref().child('/cpf').child(cpf).set({
-		nome: nome,
-		cpf: cpf,
-		email: email,
-		matricula: matricula,
-		data: data
-		});
-    console.log('Cadastro efetuado com sucesso!');
+    if (!firebase.apps.length) {
+      firebase.initializeApp(config);
+      firebase.database().ref().child('/cpf').child(cpf).set({
+  		nome: nome,
+  		cpf: cpf,
+  		email: email,
+  		matricula: matricula,
+  		data: data
+  		});
+      console.log('Cadastro efetuado com sucesso!');
+    }else{
+      firebase.database().ref().child('/cpf').child(cpf).set({
+  		nome: nome,
+  		cpf: cpf,
+  		email: email,
+  		matricula: matricula,
+  		data: data
+  		});
+      console.log('Cadastro efetuado com sucesso!');
+    }
 }
 
 module.exports = router;

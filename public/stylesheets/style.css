@@ -8,37 +8,43 @@
   background-color: #aff7ff;
 }
 
+/*
 button{
   background-color: white;
-  border: 1px solid black;
+  border: 5px solid black;
   float: right;
-}
+}*/
 
 /*--------------ESTILOS GLOBAIS--------------*/
-* {
+* { /*centraliza o layout no meio da pagina*/
 margin:0;
 padding:0;
 list-style:none;
 text-decoration:none;
 }
+
 body {
 font-family: 'Montserrat', sans-serif;
 font-size:18px;
+padding: 20px;/*Espessura margem da pagina*/
+background:#6495ED;/*cor da pagina*/
 }
 a, a:visited {
 color: #00B7FF;
 }
 
-/*--------------ESTILO MENU----------------*/ 
+/*--------------ESTILO MENU----------------*/
 nav {/*barra de navegação principal*/
 background:blue;
-width:100%;
-height:100px;
+width:97%;/*width(porcentagem largura na tela)*/
+height:100px;/*altura na tela*/
 text-align:center;
+position: fixed;
+top: 0px;
 }
 
 nav ul li {/*Deixa itens do menu um na frente do outro*/
-display:inline-block; 
+display:inline-block;
 
 }
 
@@ -54,27 +60,30 @@ background:#555152;/*cor de fundo ao passar mouse em itens*/
 }
 
 .titulo-blog, .titulo-blog:visited {/*CSS do primeiro item da barra menu*/
-   
+
 color:#FBB829;
 font-weight:600;
 font-size: 20px;
 text-transform:uppercase;
 justify-content: center;
+
 }
 
 a.titulo-blog:hover {
 background:none;
-color:#FBB829;
-justify-content: center;
+/*justify-content: center; + cor amarela*/
 }
 
-body {
-padding: 30px;/*Espessura margem da pagina*/
-background:#6495ED;/*cor da pagina*/
-}
 
-.banner-wrap{background:url(/images/bg2.jpg); padding-top:60px; padding-bottom:60px; margin-bottom:50px; margin-top:40px;}
+.banner-wrap{background:url(/images/bg2.jpg); padding-top:60px; padding-bottom:60px; margin-bottom:50px; margin-top:140px;}
 .banner{ width:960px; margin:0 auto;}
+
+fieldset {
+  border-width: medium;
+  border-style: solid;
+  border-color: #00f;
+}
+
 
 /*--------------CLASSES GENERICAS----------------*/
 .marRight40{ margin-right:40px;}
@@ -85,6 +94,10 @@ background:#6495ED;/*cor da pagina*/
 
 /*--------------PAINEIS----------------*/
 .panel{overflow:hidden; background: url(/images/bg3.jpg); padding:30px;}
+.panel1{overflow:hidden; background: url(/images/panel1.jpg); padding:30px;height:222px}
+.panel2{overflow:hidden; background: url(/images/panel2.jpg); padding:30px;height:222px}
+.panel3{overflow:hidden; background: url(/images/panel3.jpg); padding:30px;height:222px}
+.panel4{overflow:hidden; background: url(/images/panel4.jpg); padding:30px;height:222px}
 .title{ margin-bottom:20px; margin-top:15px;}
 .content p{ padding-bottom:10px;}
 .content img{margin-right:30px; float:left;}
