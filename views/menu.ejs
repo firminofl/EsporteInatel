@@ -3,8 +3,8 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script type="text/javascript" src="/javascripts/jquery.js"></script>
     <script type="text/javascript" src="/javascripts/validacao.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -32,11 +32,11 @@
 	  dbRef.on('value', snap => titulo.innerText = snap.val());
 	</script>
 
-    <h1 id="titulo">Cadastro de pessoas</h1>
+    <h1 id="titulo">Cadastro de faculdade</h1>
 
     <fieldset id="formCadastro">
-	    <legend>Cadastro de pessoa</legend>
-	    <form action="/cadastrar-pessoa" method="POST" onsubmit="return validacao()">
+	    <legend>Formulário</legend>
+	    <form action="/cadastrar-pessoa/" method="POST" onsubmit="return validacao()">
 
 			<!--Associar label com os elementos - Boa pratica-->
 			<label for="nome">Nome</label>

@@ -16,29 +16,29 @@ messagingSenderId: "579754760416"
 
 /* GET home page. */
 router.get('/', function(request, response, next) {
-  response.render('index', { title: 'Inicial'});
+  response.render('index', { title: 'Esportes inatel'});
   next();
 });
 
 router.get('/listar-pessoas', function(request, response, next) {
-  response.render('lista', { title: 'Pessoas cadastradas'});
+  response.render('lista', { title: 'Faculdades cadastradas'});
   next();
 });
 
 router.get('/abrir-form', function(request, response, next) {
-  response.render('menu', { title: 'Cadastrar pessoa'});
+  response.render('menu', { title: 'Cadastrar faculdade'});
   next();
 });
 
 /* POST home page. */
-router.post('/cadastrar-pessoa', function(request, response, next) {
+router.post('/cadastrar-pessoa/', function(request, response, next) {
 
 	var nome = request.body.nome;
 	var cpf = request.body.cpf;
 	var email = request.body.email;
 	var matricula = request.body.matricula;
 	var data = request.body.data;
-  
+
 	/*
 	var url = request.body.url;
 	var pesquisar = request.body.pesquisar;
@@ -49,9 +49,9 @@ router.post('/cadastrar-pessoa', function(request, response, next) {
 		nome: request.body.nome,
 		cpf: request.body.cpf,
 		email: request.body.email,
-	    matricula: request.body.matricula,
-	    data: request.body.data
-		
+	  matricula: request.body.matricula,
+	  data: request.body.data
+
 		url: request.body.url,
 		pesquisar: request.body.pesquisar,
 		valores: request.body.valores,
@@ -65,23 +65,20 @@ router.post('/cadastrar-pessoa', function(request, response, next) {
 	*/
 	writeUserData(nome, cpf, email, matricula, data);
 
-
-	response.render('menu', { title: 'Inicial'});
+	response.render('menu', { title:  'Cadastrar faculdade'});
 	next();
 });
 
 function writeUserData(nome, cpf, email, matricula, data) {
-	if (!firebase.apps.length) {
 		firebase.initializeApp(config);
-	}else{
-		firebase.database().ref().child('/cpf').child(cpf).set({
+    firebase.database().ref().child('/cpf').child(cpf).set({
 		nome: nome,
 		cpf: cpf,
 		email: email,
 		matricula: matricula,
 		data: data
 		});
-	}
+    console.log('Cadastro efetuado com sucesso!');
 }
 
 module.exports = router;
