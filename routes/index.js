@@ -17,6 +17,7 @@ messagingSenderId: "579754760416"
 /* GET home page. */
 router.get('/', function(request, response, next) {
   response.render('index', { title: 'Inicial'});
+  next();
 });
 
 router.get('/listar-pessoas', function(request, response, next) {
@@ -24,39 +25,49 @@ router.get('/listar-pessoas', function(request, response, next) {
   next();
 });
 
+router.get('/abrir-form', function(request, response, next) {
+  response.render('menu', { title: 'Cadastrar pessoa'});
+  next();
+});
+
 /* POST home page. */
 router.post('/cadastrar-pessoa', function(request, response, next) {
 
 	var nome = request.body.nome;
-  var cpf = request.body.cpf;
-  var email = request.body.email;
-  var matricula = request.body.matricula;
-  var data = request.body.data;
-  // var url = request.body.url;
-  // var pesquisar = request.body.pesquisar;
-  // var valores = request.body.valores;
-  // var cor = request.body.cor;
+	var cpf = request.body.cpf;
+	var email = request.body.email;
+	var matricula = request.body.matricula;
+	var data = request.body.data;
+  
+	/*
+	var url = request.body.url;
+	var pesquisar = request.body.pesquisar;
+	var valores = request.body.valores;
+	var cor = request.body.cor;
 
 	hash = {
 		nome: request.body.nome,
-    cpf: request.body.cpf,
+		cpf: request.body.cpf,
 		email: request.body.email,
-    matricula: request.body.matricula,
-    data: request.body.data
-    // url: request.body.url,
-    // pesquisar: request.body.pesquisar,
-    // valores: request.body.valores,
-    // cor: request.body.cor
+	    matricula: request.body.matricula,
+	    data: request.body.data
+		
+		url: request.body.url,
+		pesquisar: request.body.pesquisar,
+		valores: request.body.valores,
+		cor: request.body.cor
 	}
-
-	writeUserData(nome, cpf, email, matricula, data);
 
 	pessoa.push(hash);
 	console.log("--------------");
 	console.log(pessoa);
 	console.log("--------------");
+	*/
+	writeUserData(nome, cpf, email, matricula, data);
 
-  response.render('index', { title: 'Inicial'});
+
+	response.render('menu', { title: 'Inicial'});
+	next();
 });
 
 function writeUserData(nome, cpf, email, matricula, data) {
@@ -64,11 +75,11 @@ function writeUserData(nome, cpf, email, matricula, data) {
 		firebase.initializeApp(config);
 	}else{
 		firebase.database().ref().child('/cpf').child(cpf).set({
-      nome: nome,
-      cpf: cpf,
-  		email: email,
-      matricula: matricula,
-      data: data
+		nome: nome,
+		cpf: cpf,
+		email: email,
+		matricula: matricula,
+		data: data
 		});
 	}
 }

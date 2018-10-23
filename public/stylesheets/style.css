@@ -1,12 +1,3 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
-
 /**Cor quando passar por cima**/
 #minhaTabela tr:hover td{
   background-color: #feffb7;
@@ -22,3 +13,84 @@ button{
   border: 1px solid black;
   float: right;
 }
+
+/*--------------ESTILOS GLOBAIS--------------*/
+* {
+margin:0;
+padding:0;
+list-style:none;
+text-decoration:none;
+}
+body {
+font-family: 'Montserrat', sans-serif;
+font-size:18px;
+}
+a, a:visited {
+color: #00B7FF;
+}
+
+/*--------------ESTILO MENU----------------*/ 
+nav {/*barra de navegação principal*/
+background:blue;
+width:100%;
+height:100px;
+text-align:center;
+}
+
+nav ul li {/*Deixa itens do menu um na frente do outro*/
+display:inline-block; 
+
+}
+
+nav ul li a {
+display:block;/*coloca itens no meio de forma solida*/
+padding:38px 20px;/*espaco de cima pra baixo dos itens/espacamento entre itens*/
+transition: all 0.6s ease;/*tempo de reconhecer mouse passando em cima dos itens do menu*/
+
+}
+
+nav ul li a:hover {
+background:#555152;/*cor de fundo ao passar mouse em itens*/
+}
+
+.titulo-blog, .titulo-blog:visited {/*CSS do primeiro item da barra menu*/
+   
+color:#FBB829;
+font-weight:600;
+font-size: 20px;
+text-transform:uppercase;
+justify-content: center;
+}
+
+a.titulo-blog:hover {
+background:none;
+color:#FBB829;
+justify-content: center;
+}
+
+body {
+padding: 30px;/*Espessura margem da pagina*/
+background:#6495ED;/*cor da pagina*/
+}
+
+.banner-wrap{background:url(/images/bg2.jpg); padding-top:60px; padding-bottom:60px; margin-bottom:50px; margin-top:40px;}
+.banner{ width:960px; margin:0 auto;}
+
+/*--------------CLASSES GENERICAS----------------*/
+.marRight40{ margin-right:40px;}
+.page-wrap{ width:960px; overflow:hidden; margin:0 auto;}
+.wrap{ overflow:hidden;}
+.box{ width:460px; float:left; margin-bottom:40px;}
+
+
+/*--------------PAINEIS----------------*/
+.panel{overflow:hidden; background: url(/images/bg3.jpg); padding:30px;}
+.title{ margin-bottom:20px; margin-top:15px;}
+.content p{ padding-bottom:10px;}
+.content img{margin-right:30px; float:left;}
+
+/*--------------FOOTER CLASSES----------------*/
+.copyright-wrap{ overflow:hidden;}
+.copyright{width:960px; margin:0 auto; padding-top:40px; padding-bottom:20px;}
+.copyright .content p{ color:blue; font-size:17px;}
+.copyright .content p a.link{ text-decoration:none; color:blue;}
