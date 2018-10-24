@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Esportes inatel</title>
+    <link rel='stylesheet' href='/stylesheets/formulario.css' />
+    <!--<script type="text/javascript" src="/javascripts/validacao.js"></script>-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+  <!--
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+		apiKey: "AIzaSyCWmja0zi6SBxOV4vOq5Exm0nA_ZEGoxz8",
+		authDomain: "esporteinatel.firebaseapp.com",
+		databaseURL: "https://esporteinatel.firebaseio.com",
+		projectId: "esporteinatel",
+		storageBucket: "esporteinatel.appspot.com",
+		messagingSenderId: "579754760416"
+	  };
+
+	  firebase.initializeApp(config);
+
+	  var nome = document.getElementById('titulo');
+	  var dbRef = firebase.database().ref().child('titulo');
+	  dbRef.on('value', snap => titulo.innerText = snap.val());
+	</script>
+
+  <h1 id="titulo">Cadastro de pessoa</h1>
+  -->
+  <div class="container contact-form">
+      <div class="contact-image">
+          <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+      </div>
+        <form action="/cadastrar-pessoa/" method="POST" onsubmit="return validacao()">
+            <h3>Cadastrar aluno</h3>
+           <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input id="nome" type="text" name="nome" class="form-control" placeholder="Seu nome *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input id="email" type="email" name="email" class="form-control" placeholder="Seu email *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input id="cpf" type="text" name="cpf" class="form-control" placeholder="CPF *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input id="matricula" type="text" name="matricula" class="form-control" placeholder="Sua matrícula *" value="" />
+                    </div>
+
+                    <div>
+                      <div>
+                        <input type="submit" class="btnContact" value="Salvar" />
+                      </div>
+                      <br></br>
+                      <div class="form-group">
+                        <input type="reset" class="btnContact" value="Limpar campos acima"/>
+                      </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </form>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <form action="/" method="GET">
+              <input type="submit" class="btnContact" value="Página inicial"/>
+            </form>
+          </div>
+        </div>
+  </div>
+  </body>
+</html>

@@ -26,7 +26,7 @@ router.get('/listar-pessoas', function(request, response, next) {
 });
 
 router.get('/abrir-form', function(request, response, next) {
-  response.render('menu', { title: 'Cadastrar pessoa'});
+  response.render('formulario', { title: 'Cadastrar pessoa'});
   next();
 });
 
@@ -65,7 +65,7 @@ router.post('/cadastrar-pessoa/', function(request, response, next) {
 	*/
 	writeUserData(nome, cpf, email, matricula, data);
 
-	response.render('menu', { title:  'Cadastrar faculdade'});
+	response.render('formulario', { title:  'Cadastrar faculdade'});
 	next();
 });
 

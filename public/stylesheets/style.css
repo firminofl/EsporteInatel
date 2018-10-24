@@ -15,7 +15,7 @@ button{
   float: right;
 }*/
 
-/*--------------ESTILOS GLOBAIS--------------*/
+*--------------ESTILOS GLOBAIS--------------*/
 * { /*centraliza o layout no meio da pagina*/
 margin:0;
 padding:0;
@@ -78,12 +78,61 @@ background:none;
 .banner-wrap{background:url(/images/bg2.jpg); padding-top:60px; padding-bottom:60px; margin-bottom:50px; margin-top:140px;}
 .banner{ width:960px; margin:0 auto;}
 
-fieldset {
-  border-width: medium;
-  border-style: solid;
-  border-color: #00f;
+ fieldset{
+  /*background:#6495ED;*/
+  color:black;
+  text-transform:uppercase;
+  font-size: 20px;
+  height: 500px;}
+
+  form {
+    /* Apenas para centralizar o form na página */
+    margin: 0 auto;
+    width: 500px;
+    /* Para ver as bordas do formulário */
+    padding: 1em;
+    border: 1px solid #000000;
+    border-radius: 1em;
 }
 
+label {
+  /*Para ter certeza que todas as labels
+  tem o mesmo tamanho e estão propriamente alinhadas */
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+
+input, textarea {
+
+  /* Para harmonizar o look & feel das bordas nos campos de texto*/
+  border: 2px solid #000000;
+  width: 300px;
+}
+
+input[type=submit]{
+  width: 200px;
+  text-align: center;
+}
+
+  /*
+  input[type=nome]{
+    width: 300px;
+  }
+  input[type=cpf]{
+    width: 320px;
+  }
+  input[type=email]{
+    width: 300px;
+  }
+  input[type=text]{
+    width: 245px;
+  }
+  input[type=date]{
+    width: 150px;
+  }
+
+  */
 
 /*--------------CLASSES GENERICAS----------------*/
 .marRight40{ margin-right:40px;}
