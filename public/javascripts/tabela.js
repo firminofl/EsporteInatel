@@ -49,8 +49,7 @@ function eventoTabela() {
       "Nome: " + selecionado[4].innerHTML + "\n"+
       "Email: " + selecionado[2].innerHTML + "\n" +
       "CPF: " + selecionado[0].innerHTML + "\n" +
-      "Matricula: " + selecionado[3].innerHTML + "\n"+
-      "Data: " + selecionado[1].innerHTML  + "\n";
+      "Matricula: " + selecionado[3].innerHTML
     }
 
     alert(dados);
