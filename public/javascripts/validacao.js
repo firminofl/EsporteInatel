@@ -1,6 +1,6 @@
 function validacao(){
 	var nome = $("#nome").val();
-	var email = $("#email").val();
+	var cpf = $("#cpf").val();
 
 	//primeira validação
 	if (nome == "") {
@@ -10,9 +10,9 @@ function validacao(){
 	}
 
 	//segunda validação
-	if (email == "") {
-		alert("Por favor digite seu email.");
-		$("email").focus();
+	if (cpf == "") {
+		alert("Por favor digite seu CPF.");
+		$("cpf").focus();
 		return false; //Mantem na pagina até o campo ser preenchido
 	}
 	return true
